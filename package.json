@@ -1,0 +1,17 @@
+{
+  "name": "mini-linear-jira",
+  "version": "1.0.0",
+  "description": "Mini-Linear/Jira application monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "start:backend": "cd apps/backend && npm run start",
+    "start:frontend": "cd apps/frontend && npm run dev",
+    "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
